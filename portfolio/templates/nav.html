@@ -1,22 +1,22 @@
-<nav class="navbar navbar-expand-lg" style="background-color: #6A15A2; border-bottom: 1px solid #9C42BD;">
+<nav class="navbar navbar-expand-lg" style="background-color: #161e29; border-bottom: 1px solid #2e3c51;">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#" style="color: white;">Navbar</a>
+        <a class="navbar-brand" href="{% url 'home' %}" style="color: #ff0;">Full Stack Developer</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#" style="color: white;">Home</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}" style="color: white;">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="color: white;">Features</a>
+                    <a class="nav-link" href="#" style="color: white;">Blog</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#" style="color: white;">Pricing</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true" style="color: white;">Disabled</a>
+                    <a class="nav-link" href="{% url 'contact' %}" style="color: white;">Contact me</a>
                 </li>
             </ul>
         </div>
