@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ blog.title }}{% endblock %}
+
+{% block content %}
+    <div class="card mt-5">
+        <div class="card-body" style="background-color: #161e29;">
+            <h5 class="card-title" style="color: white;">{{ blog.title }}</h5>
+            <p class="card-text" style="color: white;">{{ blog.content }}</p>
+            <p class="card-text" style="color: yellow;">Publicado el: {{ blog.date_posted }}</p>
+        </div>
+    </div>
+{% endblock %}

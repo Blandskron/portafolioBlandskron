@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Lista de blogs{% endblock %}
+
+{% block content %}
+    <h2>Lista de blogs</h2>
+    <div class="row">
+        <br>
+        {% for blog in blogs %}
+            <div class="card text-center mt-3" style="background-color: #161e29;">
+                <div class="card-header" style="color: white"><h5 class="card-title" style="color: white">{{ blog.title }}</h5></div>
+                <div class="card-body">
+                <p class="card-text" style="color: white">{{ blog.content|slice:":100" }}</p>
+                <a href="{% url 'blog_detail' blog.id %}" class="btn btn-outline-warning">Leer Completo</a>
+                </div>
+                <div class="card-footer text-body-secondary"><p class="card-text" style="color: yellow;">Publicado el: {{ blog.date_posted }}</p></div>
+            </div>
+        {% endfor %}
+        <br>
+    </div>
+{% endblock %}
