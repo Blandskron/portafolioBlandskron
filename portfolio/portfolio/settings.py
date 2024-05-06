@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-(+wso^flp8sc)qqya$l$z$09353hapglsbvge0p66si8k0z2m#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'webportfolioapp',
     'blogapp',
+    'authapp',
+    'error_pages',
 ]
 
 MIDDLEWARE = [
@@ -68,6 +70,9 @@ TEMPLATES = [
         },
     },
 ]
+
+# LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = '/profile/'
 
 WSGI_APPLICATION = 'portfolio.wsgi.application'
 
@@ -124,6 +129,10 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
+
+# Configuración para archivos multimedia (imágenes de perfil)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media/'
 
 
 # Default primary key field type
