@@ -1,13 +1,15 @@
-<!-- error_pages/templates/error_pages/500.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error 500</title>
-</head>
-<body>
-    <h1>Error 500</h1>
-    <p>¡Algo salió mal en el servidor!</p>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}500{% endblock %}
+
+{% block content %}
+    <div class="container text-center mt-5 mb-5" style="background-color: #161e29; border-top: 1px solid #2e3c51; box-shadow: 0px 0px 20px rgba(106, 21, 162, 0.5);">
+        <div class="row text-center">
+            <div class="scroll-container">
+                <h2 class="mt-5 mb-5" style="color: white;">Error 500</h2>
+                <p class="mt-5 mb-5" style="color: white;">¡Ups! Algo salio mal.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
