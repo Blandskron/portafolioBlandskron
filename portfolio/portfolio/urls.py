@@ -28,10 +28,10 @@ urlpatterns = [
     path('home/', include('webportfolioapp.urls')),
     path('blog/', include('blogapp.urls')),
     path('accounts/', include('authapp.urls')),
+    path('expenses/', include('expensesapp.urls')),
 ]
-
-handler404 = 'error_pages.views.error_404'
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-    
+
+handler404 = 'error_pages.views.error_404'
